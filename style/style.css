@@ -1,0 +1,5 @@
+/* global */
+@import "global/global.css";
+
+/* pagina inicial */
+@import "home-page/home-page.css"

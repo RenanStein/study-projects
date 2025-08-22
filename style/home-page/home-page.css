@@ -1,0 +1,109 @@
+/* header */
+.header-bg {
+  background: #000;
+}
+
+.header {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.header-nav a {
+  padding: 10px 0px;
+  color: #fff;
+  position: relative;
+}
+
+.header-nav a:hover {
+  color: #c7c7c7;
+}
+
+.header-nav a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: #c7c7c7;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 550px) {
+  .header {
+    display: grid;
+    justify-content: center;
+  }
+  .header-nav ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.header-nav a {
+  background-color: #252525;
+  border-radius: 4px;
+}
+.header-nav a:hover {
+  background-color: #1b1b1b;
+}
+.header-nav a:hover::after {
+  width: 0px;
+}
+}
+
+
+/* main */
+.project {
+  margin-top: 120px;
+  display: grid;
+  justify-content: center;
+}
+
+.project h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.project p {
+  margin-top: 20px;
+  color: #1b1b1b;
+  display: grid;
+  justify-content: center;
+}
+
+.project-items {
+  background: #c7c7c7;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 4px;
+  color: #000;
+  margin-top: 20px;
+}
+
+.project-items:hover {
+  background: #a8a8a8;
+}
+
+.project-items p {
+  margin-top: 0px;
+}
