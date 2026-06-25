@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,31 +25,49 @@
       <h2>Formulário</h2>
       <form action="" class="form">
         <div class="form-header">
-        <label for="nome">Nome</label>
+        <label for="nome">Nome Completo</label>
         <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
         <label for="cep">CEP</label>
         <input type="number" id="cep" name="cep" placeholder="Digite seu CEP." required>
-        </div>
 
-        <div class="form-endereco">
-          <label for="logradouro">Logradouro</label>
-          <input type="text" id="logradouro" name="logradouro" placeholder="Rua Logo Ali">
-         </div>
-         <div class="form-endereco">
-          <label for="bairro">Bairro</label>
-          <input type="text" id="bairro" name="bairro" placeholder="Aqui Mesmo">
-           </div>
-           <div class="form-endereco">
-          <label for="cidade">Cidade</label>
-          <input type="text" id="cidade" name="cidade" placeholder="Dois de Nós">
-           </div>
-          <div class="form-endereco">
-          <label for="estado">Estado</label>
-          <input type="text" id="estado" name="estado" placeholder="Rio Grande do Sul">
+        <button>ENVIAR</button>
         </div>
       </form>
-      <img src="img/endereco_fiscal.png" alt="endereço">
+
+      <div class="form-resul">
+
+        <div class="form-resul-items quebra-linha-flex-100">
+          <h3>Nome Completo:</h3>
+          <span>...</span>
+        </div>
+
+        <div class="form-resul-items quebra-linha-flex-100">
+          <h3>CEP</h3>
+          <span>...</span>
+        </div>
+
+        <div class="form-resul-items quebra-linha-flex-50">
+          <h3>Logradouro</h3>
+          <span>...</span>
+        </div>
+
+        <div class="form-resul-items quebra-linha-flex-50">
+          <h3>Bairro</h3>
+          <span>...</span>
+        </div>
+
+        <div class="form-resul-items quebra-linha-flex-50">
+          <h3>Cidade</h3>
+          <span>...</span>
+        </div>
+
+        <div class="form-resul-items quebra-linha-flex-50">
+          <h3>Estado</h3>
+          <span>...</span>
+        </div>
+
+      </div>
     </section>
   </main>
 </body>
