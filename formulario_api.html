@@ -26,12 +26,12 @@
       <form action="" class="form">
         <div class="form-header">
         <label for="nome">Nome Completo</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required data-nome="input">
 
         <label for="cep">CEP</label>
-        <input type="number" id="cep" name="cep" placeholder="Digite seu CEP." required>
+        <input type="number" id="cep" name="cep" placeholder="Digite seu CEP." required data-cep="input">
 
-        <button>ENVIAR</button>
+        <button data-button>ENVIAR</button>
         </div>
       </form>
 
@@ -39,36 +39,38 @@
 
         <div class="form-resul-items quebra-linha-flex-100">
           <h3>Nome Completo:</h3>
-          <span>...</span>
+          <span data-nome="output"></span>
         </div>
 
         <div class="form-resul-items quebra-linha-flex-100">
           <h3>CEP</h3>
-          <span>...</span>
+          <span data-cep="output"></span>
         </div>
 
         <div class="form-resul-items quebra-linha-flex-50">
           <h3>Logradouro</h3>
-          <span>...</span>
+          <span data-logradouro></span>
         </div>
 
         <div class="form-resul-items quebra-linha-flex-50">
           <h3>Bairro</h3>
-          <span>...</span>
+          <span data-bairro></span>
         </div>
 
         <div class="form-resul-items quebra-linha-flex-50">
           <h3>Cidade</h3>
-          <span>...</span>
+          <span data-cidade></span>
         </div>
 
         <div class="form-resul-items quebra-linha-flex-50">
           <h3>Estado</h3>
-          <span>...</span>
+          <span data-estado></span>
         </div>
 
       </div>
     </section>
   </main>
+
+  <script type="module" src="./js/script.js"></script>
 </body>
 </html>
