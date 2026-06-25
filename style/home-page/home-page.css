@@ -12,6 +12,18 @@
   flex-wrap: wrap;
 }
 
+.header h1 a {
+  color: white;
+}
+
+.header h1 a:visited {
+  color: white;
+}
+
+.header h1 a:hover {
+  color: rgb(116, 0, 161);
+}
+
 .header-nav ul {
   display: flex;
   gap: 30px;
@@ -25,7 +37,7 @@
 }
 
 .header-nav a:hover {
-  color: #c7c7c7;
+  color: rgb(116, 0, 161);
 }
 
 .header-nav a::after {
@@ -33,7 +45,7 @@
   display: block;
   width: 0px;
   height: 2px;
-  background: #c7c7c7;
+  background: rgb(116, 0, 161);
   position: absolute;
   transition: 0.3s;
 }

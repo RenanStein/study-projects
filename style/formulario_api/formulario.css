@@ -1,0 +1,85 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(218, 218, 218);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container-main {
+  max-width: 1000px;
+  background-color: white;
+  margin: 50px auto;
+  box-shadow: 1px 1px 10px rgb(58, 58, 58);
+  border-radius: 5px;
+}
+.form {
+  padding: 30px 50px;
+  grid-column: 1/2;
+}
+.form label, .form input{
+  display: block;
+}
+
+.section-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section-form img {
+  grid-column: 2/2;
+  grid-row: span 3;
+  align-self: center;
+}
+
+
+.section-form h2 {
+  grid-column: span 2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 30px 20px;
+  display: flex;
+  justify-self: center;
+}
+
+.form input {
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid rgb(116, 0, 161);
+  box-shadow: 1px 1px 10px rgba(58, 58, 58, 0.281);
+  border-radius: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 15px;
+}
+
+.form label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+
+.form-endereco {
+  margin-top: 20px;
+}
+
+
+@media (max-width: 700px) {
+  img {
+    display: none;
+  }
+  .section-form {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .container-main {
+    margin: 50px;
+  }
+
+  .form {
+  padding: 30px 15px;
+  }
+}

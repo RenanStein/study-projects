@@ -2,4 +2,7 @@
 @import "global/global.css";
 
 /* pagina inicial */
-@import "home-page/home-page.css"
+@import "home-page/home-page.css";
+
+/* pagina de formulario */
+@import "formulario_api/formulario.css";
