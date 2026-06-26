@@ -1,7 +1,7 @@
 
 .moeda-container {
     display: grid;
-    height: 30vh;
+    height: 15vh;
     align-content: center;
     padding: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -10,8 +10,8 @@
 .moeda {
     background-color: white;
     display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 150px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
     align-items: center;
     padding: 20px;
     border-radius: 5px;
@@ -23,6 +23,12 @@
     width: 20px;
     height: 20px;
     margin-right: 20px;
+    justify-self: end;
+    transition: transform 0.5s;
+}
+
+.girar {
+    transform: rotate(360deg);
 }
 
 .moeda img:hover {
@@ -37,8 +43,13 @@
 
 .moeda span {
     color: black;
+    justify-self: start
 }
 
+.moeda p {
+    grid-column: 2/4;
+    justify-self: start;
+}
 @media (max-width: 560px){
     .moeda-container{
         height: auto;
@@ -65,4 +76,8 @@
     margin-left: 0px;
     grid-column: 1/-1;
 }
+    .moeda p {
+        grid-column: 1/-1;
+        justify-self: start;
+    }
 }

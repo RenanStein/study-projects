@@ -13,15 +13,36 @@ fetch('https://blockchain.info/ticker')
 }
 
 refresh();
-let intervalo = setInterval(refresh, 10000);
+let tempo = 1000;
+let intervalo = setInterval(refresh, tempo);
 
 if(imgRefresh) {
     function refreshInterval() {
         clearInterval(intervalo);
-        intervalo = setInterval(refresh, 10000);
+        imgRefresh.classList.add('girar');
+        intervalo = setInterval(refresh, tempo);
+
+        function removeClass(){
+            imgRefresh.classList.remove('girar');
+        }
+        setTimeout(removeClass, 500);
     }
 
     imgRefresh.addEventListener('click', refreshInterval);
 }
 
+
+const pFrase = document.querySelector('[data-frase]');
+
+function loadingFrase(){
+fetch('https://api.chucknorris.io/jokes/random')
+.then(response => response.json())
+.then(r => {
+    console.log(r)
+    pFrase.innerText = r.value;
+})
+}
+
+loadingFrase();
+setInterval(loadingFrase, 10000);
 }
