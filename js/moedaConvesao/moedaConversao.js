@@ -44,5 +44,5 @@ fetch('https://api.chucknorris.io/jokes/random')
 }
 
 loadingFrase();
-setInterval(loadingFrase, 10000);
+setInterval(loadingFrase, 100000);
 }
