@@ -13,7 +13,7 @@ fetch('https://blockchain.info/ticker')
 }
 
 refresh();
-let tempo = 1000;
+let tempo = 1000 * 10;
 let intervalo = setInterval(refresh, tempo);
 
 if(imgRefresh) {
