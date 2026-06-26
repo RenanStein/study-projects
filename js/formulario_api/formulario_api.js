@@ -17,19 +17,22 @@ function enviarFormulario(){
   let cepFormatado = cepInput.value;
 
   fetch('https://viacep.com.br/ws/' + cepFormatado + '/json/')
-  .then(response => {
-    response.json().then(j => {
+  .then(response => response.json()) 
+    .then(j => {
     nomeOutput.innerText = nomeInput.value;
     cepOutput.innerText = j.cep;
     logradouro.innerText = j.logradouro;
     bairro.innerHTML = j.bairro;
     cidade.innerText = j.localidade;
     estado.innerText = j.estado;
+    }).catch(erro => {
+      window.alert('Não foi possível localizar o CEP.')
+      console.log(erro)
     })
-  })
 }
 
+if(button){
 button.addEventListener('click', enviarFormulario);
-console.log(nomeInput)
+}
 }
 

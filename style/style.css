@@ -6,3 +6,6 @@
 
 /* pagina de formulario */
 @import "formulario_api/formulario.css";
+
+/* pagina de moeda conversão*/
+@import "moedaConversao/moedaConversao.css";

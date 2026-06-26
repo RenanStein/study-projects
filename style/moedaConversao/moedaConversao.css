@@ -1,0 +1,68 @@
+
+.moeda-container {
+    display: grid;
+    height: 30vh;
+    align-content: center;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.moeda {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 150px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(58, 58, 58, 0.123);
+}
+
+
+.moeda img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.moeda img:hover {
+    cursor: pointer;
+}
+
+.moeda h3 {
+    color: rgb(102, 102, 102);
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+.moeda span {
+    color: black;
+}
+
+@media (max-width: 560px){
+    .moeda-container{
+        height: auto;
+    }
+    .moeda {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        justify-items: center;
+        margin-top: 30px;
+    }
+    .moeda span {
+        justify-self: start;
+    }
+    .moeda img {
+        justify-self: end;
+     }
+    .moeda span {
+        margin-left: 30px;
+    }
+    .moeda img {
+        margin-right: 30px;
+    }
+    .moeda h3 {
+    margin-left: 0px;
+    grid-column: 1/-1;
+}
+}
