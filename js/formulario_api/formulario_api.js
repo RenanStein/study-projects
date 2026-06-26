@@ -1,8 +1,4 @@
 export default function initFormularioApi(){
-
-}
-
-
 const button = document.querySelector('[data-button]');
 const nomeInput = document.querySelector('[data-nome="input"]');
 const cepInput = document.querySelector('[data-cep="input"]');
@@ -16,26 +12,24 @@ const estado = document.querySelector('[data-estado]');
 let dados = [];
 
 function enviarFormulario(){
-  const dadosFormulario = new objetoDados(nomeInput.value, cepInput.value);
-  dados.push(dadosFormulario);
+  event.preventDefault();
 
   let cepFormatado = cepInput.value;
 
   fetch('https://viacep.com.br/ws/' + cepFormatado + '/json/')
   .then(response => {
     response.json().then(j => {
-      console.log(j)
-      console.log(j.estado)
+    nomeOutput.innerText = nomeInput.value;
+    cepOutput.innerText = j.cep;
+    logradouro.innerText = j.logradouro;
+    bairro.innerHTML = j.bairro;
+    cidade.innerText = j.localidade;
+    estado.innerText = j.estado;
     })
   })
 }
 
-
-function objetoDados(nome, cep){
-  this.nome = nome;
-  this.cep = cep;
-}
-
 button.addEventListener('click', enviarFormulario);
 console.log(nomeInput)
+}
 
